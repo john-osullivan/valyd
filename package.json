@@ -1,0 +1,26 @@
+{
+  "name": "valyd",
+  "version": "0.0.1",
+  "description": "A dead simple package for validating various types of strings.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-osullivan/valyd.git"
+  },
+  "keywords": [
+    "validator",
+    "json",
+    "url",
+    "address",
+    "email"
+  ],
+  "author": "John O'Sullivan <j.osullivan42@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/john-osullivan/valyd/issues"
+  },
+  "homepage": "https://github.com/john-osullivan/valyd#readme"
+}
