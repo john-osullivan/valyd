@@ -1,10 +1,12 @@
 {
   "name": "valyd",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A dead simple package for validating various types of strings.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "tsc --esModuleInterop ./index.ts --outDir ./dist",
+    "prePublishOnly" : "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/john-osullivan/valyd/issues"
   },
-  "homepage": "https://github.com/john-osullivan/valyd#readme"
+  "homepage": "https://github.com/john-osullivan/valyd#readme",
+  "dependencies": {
+    "@types/node": "^11.13.8",
+    "isemail": "^3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
 }
