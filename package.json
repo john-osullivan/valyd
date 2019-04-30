@@ -1,6 +1,6 @@
 {
   "name": "valyd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dead simple package for validating various types of strings.",
   "main": "dist/index.js",
   "scripts": {

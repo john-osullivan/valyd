@@ -4,4 +4,6 @@ export interface valyd {
   email: StringValidator
   url: StringValidator
   json: StringValidator
-} 
+}
+
+export default valyd;

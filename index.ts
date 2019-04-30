@@ -1,7 +1,11 @@
 const isEmail = require('isemail');
 
+const isString = (val:any) => {
+  return typeof val === 'string';
+}
+
 export const email = (str:string) => {
-  return isEmail.validate(str, {errorLevel:false}) as boolean;
+  return isString(str) && isEmail.validate(str, {errorLevel:false}) as boolean;
 }
 
 export const url = (str:string) => {
@@ -16,16 +20,22 @@ export const url = (str:string) => {
     '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return !!pattern.test(str);
+    return isString(str) && !!pattern.test(str);
 }
 
 export const json = (str:string) => {
   try {
-    JSON.parse(str);
-    return true;
+    if (isString(str)){
+      JSON.parse(str);
+      return true;
+    } else {
+      return false;
+    }
   } catch (e) {
       return false;
   }
 }
 
 export const valyd = { email, url, json };
+
+export default valyd;
